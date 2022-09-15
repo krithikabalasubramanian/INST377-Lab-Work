@@ -58,7 +58,7 @@ form {
 
 
 .wrapper {
-  min-height: 100vh;
+  min-height: 93vh;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -139,6 +139,7 @@ form {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
+  max-width: 450px;
 }
 
 /*
