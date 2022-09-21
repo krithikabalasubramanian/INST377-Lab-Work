@@ -37,7 +37,7 @@ function moveToNextSlide() {
 }
 
 function moveToPrevSlide() {
-  if (slidePosition === 1) {
+  if (slidePosition === 0) {
     slidePosition = totalSlides - 1;
   } else {
     slidePosition -= 1;
