@@ -30,15 +30,14 @@ async function mainEvent() { // the async keyword means we can make API requests
         and is much more convenient than previous data handling methods.
         Here we make a basic GET request to the server using the Fetch method
         to send a request to the routes defined in /server/routes/foodServiceRoutes.js
-
-      // this is a basic GET request
-      // It does not include any of your form values, though
     */
 
-    const results = await fetch('/api/foodServicePG');
+    const results = await fetch(`/api/foodServicePG?${new URLSearchParams(formProps)}`);
+    // this is a basic GET request
+    // It does not include any of your form values, though
+    // const results = await fetch('/api/foodServicePG');
     /*
-   ## Get request with query parameters
-
+    ## Get request with query parameters
       const results = await fetch(`/api/foodServicePG?${new URLSearchParams(formProps)}`);
 
       The above request uses "string interpolation" to include an encoded version of your form values
@@ -55,6 +54,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     console.table(arrayFromJson.data); // this is called "dot notation"
     // arrayFromJson.data - we're accessing a key called 'data' on the returned object
     // it initially contains all 1,000 records from your request
+
   });
 }
 
